@@ -85,12 +85,15 @@ class PagesController extends Controller
 
     public function about() {
 
-        $name = "Hello world!";
+        $items = [
+            'it1', 'it2', 'it3'
+        ];
 
-        return view('pages.about')->with('name', $name);
+        return view('pages.about', compact('items'));
     }
 
     public function contact() {
+
         return view('pages.contact');
     }
 
