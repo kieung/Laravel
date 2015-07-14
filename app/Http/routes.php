@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+
+# Du skriver selv path name i første argument
 
 
+Route::get('about', 'PagesController@about');
+Route::get('contact', 'PagesController@contact');

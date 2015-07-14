@@ -16,7 +16,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        //
     }
 
     /**
@@ -82,4 +82,16 @@ class PagesController extends Controller
     {
         //
     }
+
+    public function about() {
+
+        $name = "Hello world!";
+
+        return view('pages.about')->with('name', $name);
+    }
+
+    public function contact() {
+        return view('pages.contact');
+    }
+
 }
