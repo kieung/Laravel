@@ -14,4 +14,7 @@ class Article extends Model
     	'body'
 
     ];
+
+
+    
 }
