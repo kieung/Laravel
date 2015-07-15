@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Article;
 
-use Illuminate\Http\Request;
+#use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Request;
 
 class ArticlesController extends Controller
 {
@@ -39,7 +40,9 @@ class ArticlesController extends Controller
      */
     public function store()
     {
-        //
+        $input = Request::all();
+        Article::create($input); //denne metoden lagrer i databasen
+        return redirect('articles');
     }
 
     /**
