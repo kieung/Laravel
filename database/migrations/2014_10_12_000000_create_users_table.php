@@ -10,6 +10,9 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+
+    #What is needed when creating a user table
+    #Remember to rollback when change/modify database
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
